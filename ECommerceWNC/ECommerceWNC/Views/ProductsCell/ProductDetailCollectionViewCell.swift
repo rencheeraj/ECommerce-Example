@@ -1,14 +1,13 @@
 //
-//  ProductDetailTableViewCell.swift
+//  ProductDetailCollectionViewCell.swift
 //  ECommerceWNC
 //
-//  Created by Rencheeraj Mohan on 25/05/23.
+//  Created by Rencheeraj Mohan on 26/05/23.
 //
 
 import UIKit
 
-class ProductDetailTableViewCell: UITableViewCell {
-
+class ProductDetailCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var productDescription: UILabel!
     @IBOutlet weak var currentPrice: UILabel!
@@ -21,10 +20,4 @@ class ProductDetailTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }
