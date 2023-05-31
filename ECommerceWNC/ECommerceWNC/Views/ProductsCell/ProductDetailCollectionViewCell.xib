@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ProductDetailCollectionViewCell" customModule="ECommerceWNC" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" id="gTV-IL-0wX" customClass="ProductDetailCollectionViewCell" customModule="ECommerceWNC" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -87,6 +87,13 @@
                             </attributedString>
                         </buttonConfiguration>
                     </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tua-Yn-Bpl">
+                        <rect key="frame" x="10" y="209" width="38" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Sdf-hb-TGM"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
@@ -99,11 +106,15 @@
                 <constraint firstItem="jSc-Dq-y3d" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="Dvz-M6-olV"/>
                 <constraint firstItem="gvJ-Q0-BLY" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="G32-I1-3ed"/>
                 <constraint firstItem="3FH-md-dXc" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="L2P-Ce-e7e"/>
+                <constraint firstItem="tua-Yn-Bpl" firstAttribute="leading" secondItem="jxi-9U-rvA" secondAttribute="leading" id="MHz-XE-IMI"/>
+                <constraint firstItem="tua-Yn-Bpl" firstAttribute="trailing" secondItem="jxi-9U-rvA" secondAttribute="trailing" constant="-7" id="PFf-kS-i1z"/>
+                <constraint firstItem="tua-Yn-Bpl" firstAttribute="centerY" secondItem="jxi-9U-rvA" secondAttribute="centerY" id="Ru2-Xf-6ah"/>
                 <constraint firstItem="jxi-9U-rvA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="S8p-IP-sGL"/>
                 <constraint firstItem="pwM-6b-TSJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="UTL-bW-gna"/>
                 <constraint firstAttribute="bottom" secondItem="BUX-ug-6IV" secondAttribute="bottom" constant="5" id="Us3-uM-BU5"/>
                 <constraint firstAttribute="trailing" secondItem="pwM-6b-TSJ" secondAttribute="trailing" constant="10" id="VA8-aq-bmk"/>
                 <constraint firstItem="jxi-9U-rvA" firstAttribute="top" secondItem="3FH-md-dXc" secondAttribute="bottom" constant="9" id="cAz-z7-SzL"/>
+                <constraint firstItem="tua-Yn-Bpl" firstAttribute="centerX" secondItem="jxi-9U-rvA" secondAttribute="centerX" constant="-3.5" id="fgN-FD-Gwk"/>
                 <constraint firstItem="BUX-ug-6IV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="45" id="gRX-HN-UdX"/>
                 <constraint firstItem="3FH-md-dXc" firstAttribute="top" secondItem="3xr-7H-Sip" secondAttribute="bottom" constant="10" id="iw7-dh-hrj"/>
                 <constraint firstItem="3xr-7H-Sip" firstAttribute="top" secondItem="jSc-Dq-y3d" secondAttribute="bottom" constant="7" id="oS3-aQ-Cbd"/>

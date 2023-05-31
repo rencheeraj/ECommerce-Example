@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74208BAA2A26E5A100D97640 /* CircularImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74208BA92A26E5A100D97640 /* CircularImageView.swift */; };
 		743DF1DF2A1F4EF300774B4C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 743DF1DE2A1F4EF300774B4C /* Kingfisher */; };
 		7450719E2A1FCE6100B3BF5A /* ProductsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7450719C2A1FCE6100B3BF5A /* ProductsTableViewCell.swift */; };
 		7450719F2A1FCE6100B3BF5A /* ProductsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7450719D2A1FCE6100B3BF5A /* ProductsTableViewCell.xib */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		74208BA92A26E5A100D97640 /* CircularImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularImageView.swift; sourceTree = "<group>"; };
 		7450719C2A1FCE6100B3BF5A /* ProductsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewCell.swift; sourceTree = "<group>"; };
 		7450719D2A1FCE6100B3BF5A /* ProductsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductsTableViewCell.xib; sourceTree = "<group>"; };
 		745071A22A1FDE5D00B3BF5A /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 		7484D3132A1F1E270025A5FD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				74208BA92A26E5A100D97640 /* CircularImageView.swift */,
 				7450719B2A1FCE3B00B3BF5A /* ProductsTableviewCell */,
 				7484D31E2A1F22240025A5FD /* ProductsCell */,
 				7484D31D2A1F221B0025A5FD /* BannerCell */,
@@ -284,6 +287,7 @@
 				7484D3032A1F1DFD0025A5FD /* ViewController.swift in Sources */,
 				7484D2FF2A1F1DFD0025A5FD /* AppDelegate.swift in Sources */,
 				745071A42A1FDE5D00B3BF5A /* CategoryCollectionViewCell.swift in Sources */,
+				74208BAA2A26E5A100D97640 /* CircularImageView.swift in Sources */,
 				745071AC2A1FE16F00B3BF5A /* ProductDetailCollectionViewCell.swift in Sources */,
 				7484D3012A1F1DFD0025A5FD /* SceneDelegate.swift in Sources */,
 				7484D3172A1F1E6E0025A5FD /* APICaller.swift in Sources */,

@@ -21,7 +21,6 @@ class ViewController: UIViewController {
             switch result{
             case .success(let json):
                 self.homeData = json
-                print("########### \(self.homeData)")
                 self.tableReload(vc: self.homeData!)
             case .failure(let error):
                 print(error)
@@ -32,6 +31,7 @@ class ViewController: UIViewController {
         DispatchQueue.main.async {
             self.displayTableView.delegate = self
             self.displayTableView.dataSource = self
+            self.displayTableView.sectionHeaderTopPadding = 1
             self.displayTableView.register(UINib(nibName: "ProductsTableViewCell", bundle: nil), forCellReuseIdentifier: "ProductsTableViewCell")
             self.displayTableView.reloadData()
         }
@@ -49,18 +49,22 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
                 ProductsTableViewCell else {
             fatalError("Unable to downcast the cell in cellForRowAt to ItemTableViewCell")
         }
+//        cell.productsCollection.tag = indexPath.section
         cell.products = homeData?[indexPath.row]
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0{
-            return self.view.frame.size.height/6.5
+            return hSize/7
+//            return self.view.frame.size.height/6.5
         }
         else if indexPath.row == 1{
-            return self.view.frame.size.height/4
+            return hSize/4
+//            return self.view.frame.size.height/4
         }else{
-            return self.view.frame.size.height/2
+            return hSize/2.6
+//            return self.view.frame.size.height/2
         }
     }
 }

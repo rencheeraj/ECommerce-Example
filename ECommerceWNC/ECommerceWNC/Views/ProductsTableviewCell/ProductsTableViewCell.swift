@@ -44,8 +44,17 @@ extension ProductsTableViewCell : UICollectionViewDelegate, UICollectionViewData
                 return UICollectionViewCell()
             }
             cell.categoryName.text = products?.values?[indexPath.row].name ?? ""
+            //            cell.backgroundImage.backgroundColor = randomColor()
+            //            cell.backgroundImage.layer.cornerRadius = cell.backgroundImage.frame.size.width/2
+            //            cell.backgroundImage.clipsToBounds = true
             let url = URL(string: products?.values?[indexPath.row].image_url ?? "")
+            //            cell.categoryImageView.backgroundColor = randomColor()
+            //            cell.categoryImageView.layer.cornerRadius = cell.categoryImageView.frame.size.width/2
+//            cell.circularImageView.image. = randomColor()
             cell.categoryImageView.kf.setImage(with: url)
+            cell.categoryImageView.backgroundColor = randomColor()
+            cell.categoryImageView.layer.cornerRadius = self.frame.size.height / 3.4
+            cell.categoryImageView.clipsToBounds = true
             return cell
         case CellType.banner.rawValue:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BannerCollectionViewCell", for: indexPath) as? BannerCollectionViewCell else {
@@ -58,6 +67,8 @@ extension ProductsTableViewCell : UICollectionViewDelegate, UICollectionViewData
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductDetailCollectionViewCell", for: indexPath) as? ProductDetailCollectionViewCell else {
                 return UICollectionViewCell()
             }
+            cell.layer.borderColor = UIColor.lightGray.withAlphaComponent(0.2).cgColor
+            cell.layer.borderWidth = 1.5
             cell.productDescription.text = products?.values?[indexPath.row].name ?? ""
             let url = URL(string: products?.values?[indexPath.row].image ?? "")
             cell.productImage.kf.setImage(with: url)
@@ -80,18 +91,24 @@ extension ProductsTableViewCell : UICollectionViewDelegate, UICollectionViewData
             return UICollectionViewCell()
         }
     }
-    
-    
+    func randomColor() -> UIColor{
+        let red = CGFloat(drand48())
+        let green = CGFloat(drand48())
+        let blue = CGFloat(drand48())
+        return UIColor(red: red, green: green, blue: blue, alpha: 0.4)
+    }
 }
 extension ProductsTableViewCell : UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
         switch products?.type{
         case CellType.category.rawValue:
-            return CGSize(width: 60, height: 150)
+            return CGSize(width: wSize/5.6, height: hSize/9)
         case CellType.banner.rawValue:
-            return CGSize(width: 280, height: 180)
+            return CGSize(width: wSize/1.3, height: hSize/4)
         case CellType.product.rawValue:
-            return CGSize(width: 160 , height: 300)
+            
+            return CGSize(width: wSize/2.4 , height: hSize/2.8)
         default: return CGSize(width: 0, height: 0)
         }
     }
